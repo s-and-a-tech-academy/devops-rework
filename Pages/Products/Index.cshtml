@@ -1,0 +1,20 @@
+@page
+@model REWORK.Pages.Products.IndexModel
+@{
+    ViewData["Title"] = "Our Products";
+}
+
+<link rel="stylesheet" href="~/css/products.css" />
+
+<h1 class="products-title">Our Products</h1>
+
+<div class="products-grid">
+    @foreach (var product in Model.Products)
+    {
+        <div class="product-card">
+            <h2 class="product-name">@product.Name</h2>
+            <p class="product-description">@product.Description</p>
+            <p class="product-price">@product.Price.ToString("C")</p>
+        </div>
+    }
+</div>

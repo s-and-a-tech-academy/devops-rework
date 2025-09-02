@@ -1,0 +1,16 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="welcome-container">
+    <h1 class="welcome-title">Welcome to Our Company!</h1>
+    <p class="welcome-subtitle">Click the link below to view our products.</p>
+    
+    <a asp-page="/Products/Index" class="button-primary">
+        View Products
+    </a>
+</div>
